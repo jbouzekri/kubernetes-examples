@@ -75,3 +75,4 @@ deployment.extensions "hello-minikube" deleted
 
 * [01 - First app](./01-first-app/README.md)
 * [02 - Replication Controller](./02-replication-controller/README.md)
+* [03 - Deployment](./03-deployment/README.md)
