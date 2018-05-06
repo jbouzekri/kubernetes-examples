@@ -4,33 +4,33 @@ This example runs a first application in the cluster.
 
 First starts the nodejs `pod` :
 
-```
-$ kubectl create -f ./helloworld-pod.yml
+```shell
+kubectl create -f ./helloworld-pod.yml
 ```
 
 Wait for it to spin up, you can check the advancement with the command `kubectl describe pod nodehelloworld.example.com`
 
 Then we expose the pod to the outside world using the port forwarding kubectl command :
 
-```
+```shell
 $ kubectl port-forward nodehelloworld.example.com 8081:3000
 Forwarding from 127.0.0.1:8081 -> 3000
 ```
 
-```
+```shell
 $ curl localhost:8081
 Hello World!
 ```
 
 The second solution is to use a service :
 
-```
-$ kubectl expose pod nodehelloworld.example.com --type=NodePort --name=nodehelloworld-service
+```shell
+kubectl expose pod nodehelloworld.example.com --type=NodePort --name=nodehelloworld-service
 ```
 
 Use `minikube` command to get the url and port affected to this service :
 
-```
+```shell
 $ minikube service nodehelloworld-service --url
 http://<your cluster ip>:<the port used by kubernetes to expose the hello world service>
 $ curl http://<your cluster ip>:<the port used by kubernetes to expose the hello world service>
@@ -39,7 +39,7 @@ Hello World!
 
 You can see that the `kubectl expose pod` command has created a service automatically :
 
-```
+```shell
 $ kubectl get service
 ...
 nodehelloworld-service   NodePort    10.100.133.116   <none>        3000:<the port used by kubernetes to expose the hello world service>/TCP   32s
@@ -53,7 +53,7 @@ Some useful `kubectl` commands :
 
 Examples :
 
-```
+```shell
 $ kubectl describe service nodehelloworld-service
 Name:                     nodehelloworld-service
 Namespace:                default
@@ -91,7 +91,7 @@ Hello World!Connection closed by foreign host
 
 Cleanup :
 
-```
+```shell
 $ kubectl delete service nodehelloworld-service
 service "nodehelloworld-service" deleted
 $ kubectl delete pod busybox

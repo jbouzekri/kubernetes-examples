@@ -16,7 +16,7 @@ Once minikube is installed. Spin up a kubernetes cluster using `minikube` :
 $ minikube start
 ```
 
-You will need the kubernetes admin tool `kubectl` too. Follow the [installation documentation](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-via-curl).
+You will need the kubernetes admin tool `kubectl` too. Follow the [installation documentation](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-via-curl). Note that if minikube does not find one, it installs it automatically so you may not need to do this step.
 
 `minikube` sets up automatically a kube config file to connect to it :
 
