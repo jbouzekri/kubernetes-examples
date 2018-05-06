@@ -32,8 +32,8 @@ Use `minikube` command to get the url and port affected to this service :
 
 ```shell
 $ minikube service nodehelloworld-service --url
-http://<your cluster ip>:<the port used by kubernetes to expose the hello world service>
-$ curl http://<your cluster ip>:<the port used by kubernetes to expose the hello world service>
+http://192.168.99.100:30957
+$ curl http://192.168.99.100:30957
 Hello World!
 ```
 
@@ -42,7 +42,7 @@ You can see that the `kubectl expose pod` command has created a service automati
 ```shell
 $ kubectl get service
 ...
-nodehelloworld-service   NodePort    10.100.133.116   <none>        3000:<the port used by kubernetes to expose the hello world service>/TCP   32s
+nodehelloworld-service   NodePort    10.100.133.116   <none>        3000:30957/TCP   32s
 ```
 
 Some useful `kubectl` commands :
