@@ -12,15 +12,15 @@ I am using [minikube](https://github.com/kubernetes/minikube) to setup a fully f
 
 Once minikube is installed. Spin up a kubernetes cluster using `minikube` :
 
-```
-$ minikube start
+```shell
+minikube start
 ```
 
 You will need the kubernetes admin tool `kubectl` too. Follow the [installation documentation](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-via-curl). Note that if minikube does not find one, it installs it automatically so you may not need to do this step.
 
 `minikube` sets up automatically a kube config file to connect to it :
 
-```
+```shell
 $ cat .kube/config
 apiVersion: v1
 clusters:
@@ -45,7 +45,7 @@ users:
 
 To test it :
 
-```
+```shell
 $ kubectl run hello-minikube --image=gcr.io/google_containers/echoserver:1.4 --port=8080
 deployment.apps "hello-minikube" created
 # wait a little
@@ -64,7 +64,7 @@ $ minikube stop
 
 Cleanup `minikube` :
 
-```
+```shell
 $ kubectl delete service hello-minikube
 service "hello-minikube" deleted
 $ kubectl delete deployment hello-minikube
@@ -76,3 +76,4 @@ deployment.extensions "hello-minikube" deleted
 * [01 - First app](./01-first-app/README.md)
 * [02 - Replication Controller](./02-replication-controller/README.md)
 * [03 - Deployment](./03-deployment/README.md)
+* [04 - Service](./04-service/README.md)
