@@ -77,3 +77,4 @@ deployment.extensions "hello-minikube" deleted
 * [02 - Replication Controller](./02-replication-controller/README.md)
 * [03 - Deployment](./03-deployment/README.md)
 * [04 - Service](./04-service/README.md)
+* [05 - Label](./05-label/README.md)
