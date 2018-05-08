@@ -7,14 +7,14 @@ They are key/value pairs that can be attached to objects (like tags in cloud pro
 
 Labels are not unique and multiple labels can be added to one object. Once you have labelled an object, you can use filters to narrow down results (this is called Label Selectors). You can also tag nodes using labels then with label selectors, you can setup pod to only run on specific nodes.
 
-1. First tag the node
+* First tag the node
 
 ```shell
 kubectl label nodes node1 hardware=high-spec
 kubectl label nodes node2 hardware=low-spec
 ```
 
-2. Add a `nodeSelector` to your pod configuration
+* Add a `nodeSelector` to your pod configuration
 
 ```yaml
 ...
