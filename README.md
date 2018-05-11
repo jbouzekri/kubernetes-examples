@@ -79,3 +79,4 @@ deployment.extensions "hello-minikube" deleted
 * [04 - Service](./04-service/README.md)
 * [05 - Label](./05-label/README.md)
 * [06 - Healthcheck](./06-healthcheck/README.md)
+* [07 - Secret](./07-secret/README.md)
