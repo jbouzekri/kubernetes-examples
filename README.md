@@ -81,3 +81,4 @@ deployment.extensions "hello-minikube" deleted
 * [06 - Healthcheck](./06-healthcheck/README.md)
 * [07 - Secret](./07-secret/README.md)
 * [08 - Demo Wordpress](./08-demo-wordpress/README.md)
+* [09 - Web UI](./09-web-ui/README.md)
